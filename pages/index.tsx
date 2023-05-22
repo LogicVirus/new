@@ -10,7 +10,7 @@ function HomePage() {
             Welcome to my Log!
           </h1>
           <p className="text-xl">
-            Greetings, explorers! I'm Josh Perry. Here in this digital cosmos, I venture into the nebula of Next.js and transform binary frontiers into user-friendly galaxies.
+            Greetings, explorers! I'm Josh Perry. 
           </p>
           <p className="text-xl">
             This interstellar hub, my first major foray into the coding universe, stands as a testament to my journey. Join me, as we engage warp drive and explore this ever-evolving tech universe together. 
