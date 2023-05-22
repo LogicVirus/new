@@ -1,4 +1,3 @@
-
 import Container from '../components/container'
 import Image from 'next/image'
 
@@ -21,7 +20,10 @@ function HomePage() {
           <p className="text-xl">
             Initiate star chart plotting...our odyssey is about to begin!
           </p>
-          <button onClick={() => window.open(twitterLink, "_blank")} className="bg-yellow-300 hover:bg-yellow-400 py-2 px-4 rounded">
+          <button 
+            onClick={() => window.open(twitterLink, "_blank")} 
+            className="bg-gradient-to-r from-yellow-300 via-teal-500 to-blue-500 hover:from-yellow-400 hover:via-teal-600 hover:to-blue-600 py-2 px-4 rounded"
+          >
             Follow me on Twitter
           </button>
         </div>
@@ -35,10 +37,6 @@ function HomePage() {
           height={1280 / 2}
         />
       </div>
-
-      <footer className="mt-10 text-center text-white">
-        <p>Follow me on <a href={twitterLink} target="_blank" rel="noopener noreferrer" className="text-yellow-300">Twitter</a></p>
-      </footer>
     </>
   )
 }
