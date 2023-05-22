@@ -7,7 +7,7 @@ function HomePage() {
       <Container>
         <div className="space-y-6 text-white">
           <h1 className="text-3xl font-bold text-yellow-300">
-            Welcome to StarCoder's Log!
+            Welcome to my Log!
           </h1>
           <p className="text-xl">
             Greetings, explorers! I'm Josh Perry. Here in this digital cosmos, I venture into the nebula of Next.js and transform binary frontiers into user-friendly galaxies.
