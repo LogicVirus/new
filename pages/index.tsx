@@ -42,7 +42,7 @@ function HomePage() {
         </div>
 
         <footer className="mt-10 text-center text-white">
-          <p>Follow me on <a href="https://twitter.com/joshperry" target="_blank" rel="noopener noreferrer" className="text-yellow-300">Twitter</a></p>
+          <p>Follow me on <a href="https://twitter.com/joshperry0" target="_blank" rel="noopener noreferrer" className="text-yellow-300">Twitter</a></p>
         </footer>
       </div>
     </>
