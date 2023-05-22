@@ -5,25 +5,26 @@ function HomePage() {
   return (
     <>
       <Container>
-        <div className="space-y-6">
-          <h1 className="text-2xl font-bold">
-            Hi there! I'm Josh Perry, a new Software Developer at Company. I am excited about learning and working with
-            cutting-edge tools like Next.js, and delivering efficient, user-friendly front-end experiences.
+        <div className="space-y-6 text-white">
+          <h1 className="text-3xl font-bold text-yellow-300">
+            Welcome to StarCoder's Log!
           </h1>
-          <p>
-            This portfolio, my first major project, is built with Next.js and a library called next-mdx.
-            It allows me to concentrate on creating content while the library handles the details of rendering
-            that content on the web.
+          <p className="text-xl">
+            Greetings, fellow explorers! I'm Josh Perry, once an IT Ensign now turned Software Commander. Here in this digital cosmos, I venture into the nebula of Next.js, unravel the mysteries of next-mdx, and transform binary frontiers into user-friendly galaxies.
           </p>
-
-          <p>Take a look around to see what I've been working on, and what I'm learning next!</p>
+          <p className="text-xl">
+            This interstellar hub, my first major foray into the coding universe, is a testament to my journey. Join me, as we engage warp drive and explore this ever-evolving tech universe together. 
+          </p>
+          <p className="text-xl">
+            Strap in and prepare for launch...our adventure is just getting started!
+          </p>
         </div>
       </Container>
 
-      <div className="container max-w-4xl m-auto px-4 mt-20">
+      <div className="container max-w-4xl m-auto px-4 mt-20 bg-gray-900">
         <Image
           src="/aaaa.png"
-          alt="my desk"
+          alt="A nebula signifying the uncharted territories of software development"
           width={1920 / 2}
           height={1280 / 2}
         />
