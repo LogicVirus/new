@@ -1,6 +1,6 @@
 ---
-title: "The Galactic Assembly"
-excerpt: "Captain Kirk arrives on Alpha Centauri for the United Planets Summit. Spock decides to take leave of the Enterprise."
+title: "Navigating the Digital Cosmos"
+excerpt: "In the throes of interstellar politics on Alpha Centauri, Spock confronts an inner turmoil leading him towards a personal journey of self-discovery."
 date: "2023-05-22"
 ---
 
