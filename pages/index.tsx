@@ -5,7 +5,7 @@ function HomePage() {
   return (
     <>
       <Container>
-        <div className="space-y-6">
+        <div className="space-y-6 bg-gray-900 text-white">
           <h1 className="text-2xl font-bold">
             Hi there! I'm Josh Perry, a new Software Developer at Company. I am excited about learning and working with
             cutting-edge tools like Next.js, and delivering efficient, user-friendly front-end experiences.
