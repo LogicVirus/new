@@ -21,7 +21,7 @@ function HomePage() {
         </div>
       </Container>
 
-      <div className="container max-w-4xl m-auto px-4 mt-20 bg-gray-900">
+      <div className="container max-w-4xl m-auto mt-20 bg-gray-900">
         <Image
           src="/1.png"
           alt="A nebula signifying the uncharted territories of software development"
