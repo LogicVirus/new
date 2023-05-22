@@ -1,7 +1,7 @@
 ---
 title: "The Galactic Assembly"
 excerpt: "Captain Kirk arrives on Alpha Centauri for the United Planets Summit. Spock decides to take leave of the Enterprise."
-date: "2021-03-02"
+date: "2023-05-22"
 ---
 
 An unexpected set of circumstances arose on Alpha Centauri, causing Captain Kirk to navigate through the turmoil. The politics of interstellar relations are as complex as the cosmos themselves. It was a puzzle that Kirk had always found intriguing, but at the same time, troublesome.
