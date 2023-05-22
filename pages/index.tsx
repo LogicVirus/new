@@ -7,16 +7,16 @@ function HomePage() {
       <Container>
         <div className="space-y-6">
           <h1 className="text-2xl font-bold">
-            Hey, I'm a Senior Software Engineer at Company. I enjoy working with
-            Next.js and crafting beautiful front-end experiences.
+            Hi there! I'm Josh Perry, a new Software Developer at Company. I am excited about learning and working with
+            cutting-edge tools like Next.js, and delivering efficient, user-friendly front-end experiences.
           </h1>
           <p>
-            This portfolio is built with Next.js and a library called next-mdx.
-            It allows you to write Markdown and focus on the content of your
-            portfolio.
+            This portfolio, my first major project, is built with Next.js and a library called next-mdx.
+            It allows me to concentrate on creating content while the library handles the details of rendering
+            that content on the web.
           </p>
 
-          <p>Deploy your own in a few minutes.</p>
+          <p>Take a look around to see what I've been working on, and what I'm learning next!</p>
         </div>
       </Container>
 
