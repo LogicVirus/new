@@ -63,15 +63,6 @@ function HomePage() {
           >
             Visit my Flickr
           </motion.button>
-          <Link href="/chat"> {/* Add this line */}
-            <motion.button 
-              className="chat-gradient py-2 px-4 rounded mt-4"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              Join the Chat
-            </motion.button>
-          </Link> {/* And this line */}
         </div>
       </Container>
 
