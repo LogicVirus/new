@@ -1,5 +1,9 @@
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+import WordCloud from 'react-wordcloud';
+import 'tippy.js/dist/tippy.css'; // optional for tooltips
+import 'tippy.js/animations/scale.css'; // optional for tooltips
 import { motion, useAnimation } from 'framer-motion';
-import { useEffect } from 'react';
 import Container from '../components/container'
 import Image from 'next/image'
 
@@ -9,6 +13,8 @@ function HomePage() {
 
   const controlsFlickr = useAnimation();
   const controlsTwitter = useAnimation();
+
+  const [wordCloudData, setWordCloudData] = useState([]);
 
   useEffect(() => {
     const sequence = async (controls) => {
@@ -26,6 +32,29 @@ function HomePage() {
     sequence(controlsFlickr);
     sequence(controlsTwitter);
   }, [controlsFlickr, controlsTwitter]);
+
+  useEffect(() => {
+    const fetchNewsData = async () => {
+      const response = await axios.get('https://newsapi.org/v2/top-headlines?country=us&apiKey=4de4a8c952184ea7b39a2486f8e04390');
+      const news = response.data.articles;
+      const wordCount = {};
+
+      news.forEach(article => {
+        const words = article.title.split(' ');
+        words.forEach(word => {
+          wordCount[word] = wordCount[word] ? wordCount[word] + 1 : 1;
+        });
+      });
+
+      const wordCloudArray = Object.keys(wordCount).map(word => ({ text: word, value: wordCount[word] }));
+      setWordCloudData(wordCloudArray);
+    };
+
+    fetchNewsData();
+    const interval = setInterval(fetchNewsData, 60000); // Update every minute
+
+    return () => clearInterval(interval); // Cleanup on component unmount
+  }, []);
 
   return (
     <motion.div 
@@ -69,6 +98,9 @@ function HomePage() {
           >
             Visit my Flickr
           </motion.button>
+          <div className="mt-10">
+            <WordCloud words={wordCloudData} />
+          </div>
         </div>
       </Container>
 
