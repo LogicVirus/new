@@ -4,11 +4,6 @@ import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import Header from '../components/header'
 import { Auth0Provider } from '@auth0/auth0-react'
-import { Analytics } from '@vercel/analytics/react';
-import { useEffect } from 'react';
-import { useAnimation, motion } from 'framer-motion';
-import Container from '../components/container'
-import Image from 'next/image'
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -33,15 +28,3 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     </Auth0Provider>
   )
 }
-
- 
-function MyApp({ Component, pageProps }: AppProps) {
-  return (
-    <>
-      <Component {...pageProps} />
-      <Analytics />
-    </>
-  );
-}
- 
-export default MyApp;
