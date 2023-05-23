@@ -1,7 +1,8 @@
 import { motion, useAnimation } from 'framer-motion';
 import { useEffect } from 'react';
-import Container from '../components/container'
-import Image from 'next/image'
+import Container from '../components/container';
+import Image from 'next/image';
+import WordCloud from '../components/WordCloud'; // import the WordCloud component
 
 function HomePage() {
   const twitterLink = "https://twitter.com/joshperry0";
@@ -36,7 +37,7 @@ function HomePage() {
       <Container>
         <div className="space-y-6 text-white">
           <motion.h1 
-            className="text-3xl font-bold text-blue-600"
+            className="text-3xl font-bold text-blue-700"
             initial={{ y: -100 }}
             animate={{ y: 0 }}
             transition={{ type: 'spring', stiffness: 120 }}
@@ -70,6 +71,7 @@ function HomePage() {
             Visit my Flickr
           </motion.button>
         </div>
+        <WordCloud /> {/* Insert the WordCloud component here */}
       </Container>
 
       <div className="container max-w-4xl m-auto mt-20 bg-gray-900">
