@@ -11,8 +11,8 @@ function HomePage() {
 
   useEffect(() => {
     controls.start({
-      opacity: [0.5, 1, 0.5, 1, 0.5, 1, 0.5, 1, 0.5, 1, 0.5, 1],
-      transition: { duration: 3, ease: "easeInOut", times: [0, 0.2, 0.4, 0.6, 0.8, 1] },
+      opacity: [1, 0.5, 1, 0.5, 1],
+      transition: { duration: 5, ease: "easeInOut", times: [0, 0.25, 0.5, 0.75, 1] },
     }).then(() => {
       controls.start({
         opacity: 1,
@@ -60,7 +60,7 @@ function HomePage() {
             whileTap={{ scale: 0.9 }}
             animate={controls}
           >
-            Visit my Flickr
+            Check out my Flickr
           </motion.button>
         </div>
       </Container>
