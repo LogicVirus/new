@@ -1,5 +1,6 @@
 import { motion, useAnimation } from 'framer-motion';
 import { useEffect } from 'react';
+import Link from 'next/link'; // Import the Link component
 import Container from '../components/container'
 import Image from 'next/image'
 
@@ -45,6 +46,9 @@ function HomePage() {
           >
             Greetings, explorers! I'm Josh Perry.
           </motion.p>
+
+          <Link href="/login">Chat</Link> {/* Add this line to include the "Chat" link */}
+
           <motion.button 
             onClick={() => window.open(twitterLink, "_blank")} 
             className="twitter-gradient py-2 px-4 rounded"
