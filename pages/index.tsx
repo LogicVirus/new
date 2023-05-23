@@ -36,7 +36,7 @@ function HomePage() {
       <Container>
         <div className="space-y-6 text-white">
           <motion.h1 
-            className="text-3xl font-bold text-blue-700"
+            className="text-3xl font-bold text-blue-600"
             initial={{ y: -100 }}
             animate={{ y: 0 }}
             transition={{ type: 'spring', stiffness: 120 }}
