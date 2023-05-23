@@ -4,6 +4,15 @@ import Image from 'next/image'
 
 function HomePage() {
   const twitterLink = "https://twitter.com/joshperry0";
+  const flickrLink = "https://www.flickr.com/people/191854139@N02/";
+
+  const flickerAnimation = {
+    initial: { opacity: 0.5 },
+    animate: { 
+      opacity: [0.5, 1, 0.5, 1, 0.5, 1, 0.5, 1, 0.5, 1, 0.5, 1, 0.5, 1], 
+      transition: { repeat: Infinity, duration: 1.2 }
+    }
+  };
 
   return (
     <motion.div 
@@ -36,6 +45,13 @@ function HomePage() {
             whileTap={{ scale: 0.9 }}
           >
             Follow me on Twitter
+          </motion.button>
+          <motion.button 
+            onClick={() => window.open(flickrLink, "_blank")} 
+            className="bg-red-600 hover:bg-red-700 py-2 px-4 rounded text-white"
+            {...flickerAnimation}
+          >
+            Visit me on Flickr
           </motion.button>
         </div>
       </Container>
