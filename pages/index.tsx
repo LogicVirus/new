@@ -7,19 +7,25 @@ function HomePage() {
   const twitterLink = "https://twitter.com/joshperry0";
   const flickrLink = "https://www.flickr.com/people/191854139@N02/";
 
-  const controls = useAnimation();
+  const controlsFlickr = useAnimation();
+  const controlsTwitter = useAnimation();
 
   useEffect(() => {
-    controls.start({
-      opacity: [0.5, 1, 0.5, 1],
-      transition: { duration: 6, ease: "easeInOut", times: [0, 0.33, 0.66, 1] },
-    }).then(() => {
+    const sequence = async (controls) => {
+      await controls.start({
+        opacity: [0.5, 1, 0.5, 1],
+        transition: { duration: 6, ease: "easeInOut", times: [0, 0.33, 0.66, 1] },
+      });
+
       controls.start({
         opacity: 1,
         transition: { duration: 2 }
       });
-    });
-  }, [controls]);
+    };
+
+    sequence(controlsFlickr);
+    sequence(controlsTwitter);
+  }, [controlsFlickr, controlsTwitter]);
 
   return (
     <motion.div 
@@ -50,6 +56,7 @@ function HomePage() {
             className="twitter-gradient py-2 px-4 rounded"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
+            animate={controlsTwitter}
           >
             Follow me on Twitter
           </motion.button>
@@ -58,7 +65,7 @@ function HomePage() {
             className="flickr-gradient py-2 px-4 rounded mt-4"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            animate={controls}
+            animate={controlsFlickr}
           >
             Visit my Flickr
           </motion.button>
