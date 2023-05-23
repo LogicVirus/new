@@ -11,8 +11,8 @@ function HomePage() {
 
   useEffect(() => {
     controls.start({
-      opacity: [1, 0.5, 1, 0.5, 1],
-      transition: { duration: 5, ease: "easeInOut", times: [0, 0.25, 0.5, 0.75, 1] },
+      opacity: [0.5, 1, 0.5, 1],
+      transition: { duration: 6, ease: "easeInOut", times: [0, 0.33, 0.66, 1] },
     }).then(() => {
       controls.start({
         opacity: 1,
@@ -47,7 +47,7 @@ function HomePage() {
           </motion.p>
           <motion.button 
             onClick={() => window.open(twitterLink, "_blank")} 
-            className="bg-gradient-to-r from-yellow-300 via-teal-500 to-blue-500 hover:from-yellow-400 hover:via-teal-600 hover:to-blue-600 py-2 px-4 rounded"
+            className="twitter-gradient py-2 px-4 rounded"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
@@ -55,12 +55,12 @@ function HomePage() {
           </motion.button>
           <motion.button 
             onClick={() => window.open(flickrLink, "_blank")} 
-            className="bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 hover:from-pink-600 hover:via-red-600 hover:to-orange-600 py-2 px-4 rounded mt-4"
+            className="flickr-gradient py-2 px-4 rounded mt-4"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             animate={controls}
           >
-            Check out my Flickr
+            Visit my Flickr
           </motion.button>
         </div>
       </Container>
