@@ -1,4 +1,5 @@
-import { motion } from 'framer-motion';
+import { motion, useCycle } from 'framer-motion';
+import { useEffect } from 'react';
 import Container from '../components/container'
 import Image from 'next/image'
 
@@ -6,13 +7,21 @@ function HomePage() {
   const twitterLink = "https://twitter.com/joshperry0";
   const flickrLink = "https://www.flickr.com/people/191854139@N02/";
 
-  const flickerAnimation = {
-    initial: { opacity: 0.5 },
-    animate: { 
-      opacity: [0.5, 1, 0.5, 1, 0.5, 1, 0.5, 1, 0.5, 1, 0.5, 1, 0.5, 1], 
-      transition: { repeat: Infinity, duration: 1.2 }
-    }
-  };
+  // Define two animations: flicker and fadeOut
+  const flicker = { opacity: [1, 0, 1] };
+  const fadeOut = { opacity: 0 };
+
+  // Use the useCycle hook to cycle between the flicker and fadeOut animations
+  const [animation, cycleAnimation] = useCycle(flicker, fadeOut);
+
+  // Use the useEffect hook to change the animation after a few seconds
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      cycleAnimation();
+    }, 3000); // change animation after 3 seconds
+
+    return () => clearTimeout(timer); // clear the timer if the component is unmounted
+  }, [cycleAnimation]);
 
   return (
     <motion.div 
@@ -48,10 +57,11 @@ function HomePage() {
           </motion.button>
           <motion.button 
             onClick={() => window.open(flickrLink, "_blank")} 
-            className="bg-red-600 hover:bg-red-700 py-2 px-4 rounded text-white"
-            {...flickerAnimation}
+            className="bg-purple-700 hover:bg-purple-800 py-2 px-4 rounded"
+            animate={animation}
+            transition={{ repeat: Infinity, duration: 0.5 }}
           >
-            Visit me on Flickr
+            Check my Flickr
           </motion.button>
         </div>
       </Container>
