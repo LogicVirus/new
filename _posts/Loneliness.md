@@ -10,7 +10,7 @@ Loneliness by Charles Bukowski
 
 I've never been lonely,
 
-In a room, societal, I've been,
+In a room, suicidal, I've been,
 
 Depressed, feeling awful, awful beyond all.
 
