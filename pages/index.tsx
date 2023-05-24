@@ -35,7 +35,7 @@ function HomePage() {
       transition={{ duration: 1 }}
       className="flex items-center justify-center h-screen bg-gray-900"
     >
-      <Container>
+      <Container className="mt-[-50px]">
         <div className="space-y-6 text-white text-center">
           <motion.h1 
             className="text-6xl font-bold text-blue-600"
