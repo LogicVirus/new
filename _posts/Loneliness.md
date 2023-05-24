@@ -3,7 +3,9 @@ title: "Loneliness"
 excerpt: "I've never been lonely."
 date: "2023-05-24"
 ---
+
 Loneliness by Charles Bukowski
+
 
 I've never been lonely,
 In a room, societal, I've been,
