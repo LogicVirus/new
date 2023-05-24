@@ -2,7 +2,6 @@ import { motion, useAnimation } from 'framer-motion';
 import { useEffect } from 'react';
 import Container from '../components/container'
 import Image from 'next/image'
-import style from '../styles/Home.module.css'
 
 function HomePage() {
   const twitterLink = "https://twitter.com/joshperry0";
