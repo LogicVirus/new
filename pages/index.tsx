@@ -37,7 +37,7 @@ function HomePage() {
     >
       <Container>
         <motion.h1 
-          className="text-6xl font-bold text-blue-600"
+          className="text-6xl font-bold text-blue-600 text-center"
           initial={{ y: -100 }}
           animate={{ y: 0 }}
           transition={{ type: 'spring', stiffness: 120 }}
