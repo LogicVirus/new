@@ -44,7 +44,7 @@ function HomePage() {
           Josh Perry
         </motion.h1>
         <motion.p 
-          className="text-2xl text-center mt-6"
+          className="text-2xl text-center yellow-600 mt-6"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 1 }}
