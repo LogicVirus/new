@@ -36,7 +36,7 @@ function HomePage() {
     >
       <Container>
         <motion.h1 
-          className="text-6xl font-bold text-blue-700 text-center"
+          className="text-6xl font-bold text-blue-800 text-center"
           initial={{ y: -100 }}
           animate={{ y: 0 }}
           transition={{ type: 'spring', stiffness: 120 }}
@@ -44,7 +44,7 @@ function HomePage() {
           Josh Perry
         </motion.h1>
         <motion.p 
-          className="text-2xl text-center yellow-600 mt-6"
+          className="text-2xl text-center text-yellow-600 mt-6"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 1 }}
