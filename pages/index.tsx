@@ -32,11 +32,11 @@ function HomePage() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white"
+      className="flex flex-col items-center justify-center min-h-screen text-white"
     >
       <Container>
         <motion.h1 
-          className="text-6xl font-bold text-blue-600 text-center"
+          className="text-6xl font-bold text-blue-700 text-center"
           initial={{ y: -100 }}
           animate={{ y: 0 }}
           transition={{ type: 'spring', stiffness: 120 }}
