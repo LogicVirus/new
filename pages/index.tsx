@@ -3,12 +3,14 @@ import { useEffect } from 'react';
 import Container from '../components/container'
 import Image from 'next/image'
 import style from '../styles/Home.module.css'
+
 function HomePage() {
   const twitterLink = "https://twitter.com/joshperry0";
   const flickrLink = "https://www.flickr.com/people/191854139@N02/";
 
   const controlsFlickr = useAnimation();
   const controlsTwitter = useAnimation();
+  const controlsName = useAnimation();
 
   useEffect(() => {
     const sequence = async (controls) => {
@@ -25,7 +27,8 @@ function HomePage() {
 
     sequence(controlsFlickr);
     sequence(controlsTwitter);
-  }, [controlsFlickr, controlsTwitter]);
+    controlsName.start({ scale: [1, 1.1, 1], transition: { duration: 2, repeat: Infinity } });
+  }, [controlsFlickr, controlsTwitter, controlsName]);
 
   return (
     <motion.div 
@@ -34,14 +37,14 @@ function HomePage() {
       transition={{ duration: 1 }}
     >
       <Container>
-        <div className="space-y-6 text-white">
+        <div className="space-y-6 text-white text-center">
           <motion.h1 
-            className="text-3xl font-bold text-blue-600"
+            className="text-6xl font-bold text-blue-600"
             initial={{ y: -100 }}
-            animate={{ y: 0 }}
+            animate={controlsName}
             transition={{ type: 'spring', stiffness: 120 }}
           >
-            Welcome to my Log!
+            Welcome, I'm Josh Perry!
           </motion.h1>
           <motion.p 
             className="text-xl"
@@ -49,7 +52,7 @@ function HomePage() {
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 1 }}
           >
-            Greetings, explorers! I'm Josh Perry.
+            Greetings, explorers! Welcome to my Log.
           </motion.p>
           <motion.button 
             onClick={() => window.open(twitterLink, "_blank")} 
