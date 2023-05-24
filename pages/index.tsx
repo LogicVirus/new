@@ -10,7 +10,6 @@ function HomePage() {
 
   const controlsFlickr = useAnimation();
   const controlsTwitter = useAnimation();
-  const controlsName = useAnimation();
 
   useEffect(() => {
     const sequence = async (controls) => {
@@ -27,36 +26,36 @@ function HomePage() {
 
     sequence(controlsFlickr);
     sequence(controlsTwitter);
-    controlsName.start({ scale: [1, 1.1, 1], transition: { duration: 2, repeat: Infinity } });
-  }, [controlsFlickr, controlsTwitter, controlsName]);
+  }, [controlsFlickr, controlsTwitter]);
 
   return (
     <motion.div 
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
+      className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white"
     >
       <Container>
-        <div className="space-y-6 text-white text-center">
-          <motion.h1 
-            className="text-6xl font-bold text-blue-600"
-            initial={{ y: -100 }}
-            animate={controlsName}
-            transition={{ type: 'spring', stiffness: 120 }}
-          >
-            Welcome, I'm Josh Perry!
-          </motion.h1>
-          <motion.p 
-            className="text-xl"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1, duration: 1 }}
-          >
-            Greetings, explorers! Welcome to my Log.
-          </motion.p>
+        <motion.h1 
+          className="text-6xl font-bold text-blue-600"
+          initial={{ y: -100 }}
+          animate={{ y: 0 }}
+          transition={{ type: 'spring', stiffness: 120 }}
+        >
+          Josh Perry
+        </motion.h1>
+        <motion.p 
+          className="text-2xl text-center mt-6"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1, duration: 1 }}
+        >
+          Greetings, explorers! Welcome to my portfolio.
+        </motion.p>
+        <div className="flex flex-col space-y-4 mt-8">
           <motion.button 
             onClick={() => window.open(twitterLink, "_blank")} 
-            className="twitter-gradient py-2 px-4 rounded"
+            className="twitter-gradient py-2 px-4 rounded text-lg"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             animate={controlsTwitter}
@@ -65,7 +64,7 @@ function HomePage() {
           </motion.button>
           <motion.button 
             onClick={() => window.open(flickrLink, "_blank")} 
-            className="flickr-gradient py-2 px-4 rounded mt-4"
+            className="flickr-gradient py-2 px-4 rounded text-lg"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             animate={controlsFlickr}
@@ -75,7 +74,7 @@ function HomePage() {
         </div>
       </Container>
 
-      <div className="container max-w-4xl m-auto mt-20 bg-gray-900">
+      <div className="container max-w-4xl m-auto mt-20">
         <Image
           src="/1.png"
           alt="A nebula signifying the uncharted territories of software development"
