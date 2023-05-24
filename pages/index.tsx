@@ -35,42 +35,44 @@ function HomePage() {
       transition={{ duration: 1 }}
       className="flex items-center justify-center h-screen bg-gray-900"
     >
-      <Container className="mt-[-50px]">
-        <div className="space-y-6 text-white text-center">
-          <motion.h1 
-            className="text-6xl font-bold text-blue-600"
-            initial={{ y: -100 }}
-            animate={{ y: 0 }}
-            transition={{ type: 'spring', stiffness: 120 }}
-          >
-            Josh Perry
-          </motion.h1>
-          <motion.p 
-            className="text-xl"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1, duration: 1 }}
-          >
-            Software Developer | Photographer | Explorer
-          </motion.p>
-          <motion.button 
-            onClick={() => window.open(twitterLink, "_blank")} 
-            className="twitter-gradient py-2 px-4 rounded"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            animate={controlsTwitter}
-          >
-            Follow me on Twitter
-          </motion.button>
-          <motion.button 
-            onClick={() => window.open(flickrLink, "_blank")} 
-            className="flickr-gradient py-2 px-4 rounded mt-4"
-            animate={controlsFlickr}
-          >
-            Visit my Flickr
-          </motion.button>
-        </div>
-      </Container>
+      <div className="mt-[-50px]">
+        <Container>
+          <div className="space-y-6 text-white text-center">
+            <motion.h1 
+              className="text-6xl font-bold text-blue-600"
+              initial={{ y: -100 }}
+              animate={{ y: 0 }}
+              transition={{ type: 'spring', stiffness: 120 }}
+            >
+              Josh Perry
+            </motion.h1>
+            <motion.p 
+              className="text-xl"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1, duration: 1 }}
+            >
+              Software Developer | Photographer | Explorer
+            </motion.p>
+            <motion.button 
+              onClick={() => window.open(twitterLink, "_blank")} 
+              className="twitter-gradient py-2 px-4 rounded"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              animate={controlsTwitter}
+            >
+              Follow me on Twitter
+            </motion.button>
+            <motion.button 
+              onClick={() => window.open(flickrLink, "_blank")} 
+              className="flickr-gradient py-2 px-4 rounded mt-4"
+              animate={controlsFlickr}
+            >
+              Visit my Flickr
+            </motion.button>
+          </div>
+        </Container>
+      </div>
     </motion.div>
   )
 }
