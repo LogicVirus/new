@@ -15,7 +15,7 @@ But loneliness is something I've never been bothered with.
 
 I've always had this terrible itch for solitude,
 Being at a party, a stadium full of cheering people,
-Vera might feel loneliness.
+Is where I might feel loneliness.
 Because there's nothing out there,
 It's triviality, stupid people mingling with stupid people.
 
