@@ -9,7 +9,7 @@ function ServicesPage() {
       transition={{ duration: 1 }}
       className="flex flex-col items-start justify-start min-h-screen text-white"
     >
-      <Containe className="mt-[-50px]">
+      <Container className="mt-[-50px]">
         <motion.h1 
           className="text-6xl font-bold text-yellow-600"
           initial={{ y: -100 }}
