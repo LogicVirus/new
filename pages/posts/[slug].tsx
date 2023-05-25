@@ -7,6 +7,8 @@ import distanceToNow from '../../lib/dateRelative'
 import { getAllPosts, getPostBySlug } from '../../lib/getPost'
 import markdownToHtml from '../../lib/markdownToHtml'
 import Head from 'next/head'
+import ReactMarkdown from 'react-markdown'
+import rehypeRaw from 'rehype-raw'
 
 export default function PostPage({
   post,
@@ -38,10 +40,10 @@ export default function PostPage({
               </time>
             </header>
 
-            <div
-              className="dark-prose mt-10"
-              dangerouslySetInnerHTML={{ __html: post.content }}
-            />
+            <ReactMarkdown rehypePlugins={[rehypeRaw]} className="dark-prose mt-10">
+              {post.content}
+            </ReactMarkdown>
+
           </article>
 
           <Comment />
