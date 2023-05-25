@@ -7,7 +7,7 @@ function ServicesPage() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      className="flex flex-col items-center justify-center min-h-screen text-white"
+      className="flex flex-col items-center min-h-screen text-white"
     >
       <Container>
         <motion.h1 
