@@ -11,7 +11,7 @@ function ServicesPage() {
     >
       <Container>
         <motion.h1 
-          className="text-6xl font-bold text-blue-800 text-center"
+          className="text-6xl font-bold text-yellow-600 text-center"
           initial={{ y: -100 }}
           animate={{ y: 0 }}
           transition={{ type: 'spring', stiffness: 120 }}
