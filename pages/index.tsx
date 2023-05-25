@@ -77,7 +77,7 @@ function HomePage() {
 
         <div className="container max-w-4xl m-auto mt-20">
           <Image
-            src="/qwert.png"
+            src="/qwer.png"
             alt="A nebula signifying the uncharted territories of software development"
             width={1920 / 2}
             height={1280 / 2}
