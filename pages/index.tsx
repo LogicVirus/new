@@ -75,7 +75,7 @@ function HomePage() {
           </div>
         </Container>
 
-        <div className="container max-w-4xl m-auto mt-20">
+        <div className="container max-w-4xl m-auto mt-15">
           <Image
             src="/qwer.png"
             alt="A nebula signifying the uncharted territories of software development"
