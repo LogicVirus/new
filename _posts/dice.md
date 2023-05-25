@@ -2,8 +2,9 @@
 title: "Roll the Dice"
 excerpt: "If you’re going to try, go all the way."
 date: "2023-05-25"
-Roll the Dice by Charles Bukowski
 ---
+Roll the Dice by Charles Bukowski
+
 If you’re going to try, go all the
 way.
 Otherwise, don’t even start.
