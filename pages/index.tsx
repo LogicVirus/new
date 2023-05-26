@@ -57,23 +57,21 @@ function HomePage() {
             <motion.a 
               href={twitterLink} 
               target="_blank"
-              className="twitter-gradient py-2 px-4 rounded text-lg flex items-center justify-center"
+              className="py-2 px-4 rounded text-lg flex items-center justify-center bg-gradient-to-r from-blue-500 to-blue-600 text-white"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               animate={controlsTwitter}
             >
-              <Image src="/twitter.png" alt="Twitter logo" className="mr-2"/>
               Join me on Twitter
             </motion.a>
             <motion.a 
               href={flickrLink} 
               target="_blank"
-              className="flickr-gradient py-2 px-4 rounded text-lg flex items-center justify-center"
+              className="py-2 px-4 rounded text-lg flex items-center justify-center bg-gradient-to-r from-purple-500 to-blue-500 text-white"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               animate={controlsFlickr}
             >
-              <Image src="/flickr.svg" alt="Flickr logo" className="mr-2"/>
               Explore my Flickr Gallery
             </motion.a>
           </div>
