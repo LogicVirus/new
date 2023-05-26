@@ -62,7 +62,7 @@ function HomePage() {
               whileTap={{ scale: 0.9 }}
               animate={controlsTwitter}
             >
-              <img src="/twitter.svg" alt="Twitter logo" className="mr-2"/>
+              <Image src="/twitter.svg" alt="Twitter logo" className="mr-2"/>
               Join me on Twitter
             </motion.a>
             <motion.a 
@@ -73,7 +73,7 @@ function HomePage() {
               whileTap={{ scale: 0.9 }}
               animate={controlsFlickr}
             >
-              <img src="/flickr.svg" alt="Flickr logo" className="mr-2"/>
+              <Image src="/flickr.svg" alt="Flickr logo" className="mr-2"/>
               Explore my Flickr Gallery
             </motion.a>
           </div>
