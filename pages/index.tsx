@@ -57,7 +57,7 @@ function HomePage() {
             <motion.a 
               href={twitterLink} 
               target="_blank"
-              className="py-2 px-4 rounded text-lg flex items-center justify-center bg-gradient-to-r from-blue-500 to-blue-600 text-white"
+              className="py-2 px-4 rounded text-lg flex items-center justify-center bg-gradient-to-r from-blue-500 to-blue-600 text-white w-auto px-5"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               animate={controlsTwitter}
@@ -67,7 +67,7 @@ function HomePage() {
             <motion.a 
               href={flickrLink} 
               target="_blank"
-              className="py-2 px-4 rounded text-lg flex items-center justify-center bg-gradient-to-r from-purple-500 to-blue-500 text-white"
+              className="py-2 px-4 rounded text-lg flex items-center justify-center bg-gradient-to-r from-purple-500 to-blue-500 text-white w-auto px-5"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               animate={controlsFlickr}
