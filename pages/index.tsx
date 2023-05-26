@@ -51,7 +51,7 @@ function HomePage() {
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 1 }}
           >
-            Greetings, explorers! Welcome to my portfolio.
+            Greetings, explorers! Welcome to my space.
           </motion.p>
           <div className="flex flex-col space-y-4 mt-8">
             <motion.a 
@@ -62,7 +62,7 @@ function HomePage() {
               whileTap={{ scale: 0.9 }}
               animate={controlsTwitter}
             >
-              Join me on Twitter
+              Follow me on Twitter
             </motion.a>
             <motion.a 
               href={flickrLink} 
