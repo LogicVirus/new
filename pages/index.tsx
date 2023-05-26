@@ -6,7 +6,7 @@ import { Analytics } from '@vercel/analytics/react';
 
 function HomePage() {
   const twitterLink = "https://twitter.com/joshperry0";
-  const flickrLink = "https://www.flickr.com/people/191854139@N02/";
+  const flickrLink = "https://www.flickr.com/photos/191854139@N02/";
 
   const controlsFlickr = useAnimation();
   const controlsTwitter = useAnimation();
