@@ -54,24 +54,28 @@ function HomePage() {
             Greetings, explorers! Welcome to my portfolio.
           </motion.p>
           <div className="flex flex-col space-y-4 mt-8">
-            <motion.button 
-              onClick={() => window.open(twitterLink, "_blank")} 
-              className="twitter-gradient py-2 px-4 rounded text-lg"
+            <motion.a 
+              href={twitterLink} 
+              target="_blank"
+              className="twitter-gradient py-2 px-4 rounded text-lg flex items-center justify-center"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               animate={controlsTwitter}
             >
-              Follow me on Twitter
-            </motion.button>
-            <motion.button 
-              onClick={() => window.open(flickrLink, "_blank")} 
-              className="flickr-gradient py-2 px-4 rounded text-lg"
+              <img src="/twitter.svg" alt="Twitter logo" className="mr-2"/>
+              Join me on Twitter
+            </motion.a>
+            <motion.a 
+              href={flickrLink} 
+              target="_blank"
+              className="flickr-gradient py-2 px-4 rounded text-lg flex items-center justify-center"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               animate={controlsFlickr}
             >
-              Visit my Flickr
-            </motion.button>
+              <img src="/flickr.svg" alt="Flickr logo" className="mr-2"/>
+              Explore my Flickr Gallery
+            </motion.a>
           </div>
         </Container>
 
