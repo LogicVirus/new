@@ -62,7 +62,7 @@ function HomePage() {
               whileTap={{ scale: 0.9 }}
               animate={controlsTwitter}
             >
-              <Image src="/twitter.svg" alt="Twitter logo" className="mr-2"/>
+              <Image src="/twitter.png" alt="Twitter logo" className="mr-2"/>
               Join me on Twitter
             </motion.a>
             <motion.a 
