@@ -73,32 +73,41 @@ function HomePage() {
             Greetings, space explorers! Welcome to my spaceship.
           </motion.p>
 
-          <motion.div 
-            className="text-2xl text-center text-green-500 mt-6"
-            initial={{ opacity: 0 }}
-            animate={laserFired ? { opacity: 1 } : { opacity: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            Lasers fired!
-          </motion.div>
+          <div className="relative">
+            <Image
+              src="/spaceship.png"
+              alt="A spaceship exploring the vastness of the universe"
+              width={1920 / 2}
+              height={1280 / 2}
+            />
 
-          <motion.div 
-            className="text-2xl text-center text-blue-500 mt-6"
-            initial={{ opacity: 0 }}
-            animate={warpEngaged ? { opacity: 1 } : { opacity: 0 }}
-            transition={{ duration: 1 }}
-          >
-            Engaging warp drive!
-          </motion.div>
+            <motion.div 
+              className="absolute top-0 left-0 text-2xl text-center text-green-500 mt-6"
+              initial={{ opacity: 0 }}
+              animate={laserFired ? { opacity: 1 } : { opacity: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              Lasers fired!
+            </motion.div>
 
-          <motion.div 
-            className="text-2xl text-center text-purple-500 mt-6"
-            initial={{ opacity: 0 }}
-            animate={forceFieldDeployed ? { opacity: 1 } : { opacity: 0 }}
-            transition={{ duration: 2 }}
-          >
-            Deploying force field!
-          </motion.div>
+            <motion.div 
+              className="absolute top-0 left-0 text-2xl text-center text-blue-500 mt-6"
+              initial={{ opacity: 0 }}
+              animate={warpEngaged ? { opacity: 1 } : { opacity: 0 }}
+              transition={{ duration: 1 }}
+            >
+              Engaging warp drive!
+            </motion.div>
+
+            <motion.div 
+              className="absolute top-0 left-0 text-2xl text-center text-purple-500 mt-6"
+              initial={{ opacity: 0 }}
+              animate={forceFieldDeployed ? { opacity: 1 } : { opacity: 0 }}
+              transition={{ duration: 2 }}
+            >
+              Deploying force field!
+            </motion.div>
+          </div>
 
           <div className="flex flex-col space-y-4 mt-8">
             <motion.button 
@@ -128,16 +137,26 @@ function HomePage() {
               Deploy Force Field
             </motion.button>
           </div>
-        </Container>
 
-        <div className="container max-w-4xl m-auto mt-15">
-          <Image
-            src="/zxc.png"
-            alt="A spaceship exploring the vastness of the universe"
-            width={1920 / 2}
-            height={1280 / 2}
-          />
-        </div>
+          <div className="mt-4 flex items-center justify-center space-x-4">
+            <motion.a 
+              href={twitterLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              animate={controlsTwitter}
+            >
+              <img src="/twitter-icon.png" alt="Twitter" width={24} height={24} />
+            </motion.a>
+            <motion.a 
+              href={flickrLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              animate={controlsFlickr}
+            >
+              <img src="/flickr-icon.png" alt="Flickr" width={24} height={24} />
+            </motion.a>
+          </div>
+        </Container>
       </motion.div>
       <Analytics />
     </>
