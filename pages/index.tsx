@@ -75,7 +75,7 @@ function HomePage() {
 
           <div className="relative">
             <Image
-              src="/spaceship.png"
+              src="/zxc.png"
               alt="A spaceship exploring the vastness of the universe"
               width={1920 / 2}
               height={1280 / 2}
