@@ -2,6 +2,7 @@ import { motion, useAnimation } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import Container from '../components/container'
 import Image from 'next/image'
+import Link from 'next/link';
 import { Analytics } from '@vercel/analytics/react';
 
 function HomePage() {
@@ -73,41 +74,32 @@ function HomePage() {
             Greetings, space explorers! Welcome to my spaceship.
           </motion.p>
 
-          <div className="relative">
-            <Image
-              src="/zxc.png"
-              alt="A spaceship exploring the vastness of the universe"
-              width={1920 / 2}
-              height={1280 / 2}
-            />
+          <motion.div 
+            className="text-2xl text-center text-green-500 mt-6"
+            initial={{ opacity: 0 }}
+            animate={laserFired ? { opacity: 1 } : { opacity: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            Lasers fired!
+          </motion.div>
 
-            <motion.div 
-              className="absolute top-0 left-0 text-2xl text-center text-green-500 mt-6"
-              initial={{ opacity: 0 }}
-              animate={laserFired ? { opacity: 1 } : { opacity: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              Lasers fired!
-            </motion.div>
+          <motion.div 
+            className="text-2xl text-center text-blue-500 mt-6"
+            initial={{ opacity: 0 }}
+            animate={warpEngaged ? { opacity: 1 } : { opacity: 0 }}
+            transition={{ duration: 1 }}
+          >
+            Engaging warp drive!
+          </motion.div>
 
-            <motion.div 
-              className="absolute top-0 left-0 text-2xl text-center text-blue-500 mt-6"
-              initial={{ opacity: 0 }}
-              animate={warpEngaged ? { opacity: 1 } : { opacity: 0 }}
-              transition={{ duration: 1 }}
-            >
-              Engaging warp drive!
-            </motion.div>
-
-            <motion.div 
-              className="absolute top-0 left-0 text-2xl text-center text-purple-500 mt-6"
-              initial={{ opacity: 0 }}
-              animate={forceFieldDeployed ? { opacity: 1 } : { opacity: 0 }}
-              transition={{ duration: 2 }}
-            >
-              Deploying force field!
-            </motion.div>
-          </div>
+          <motion.div 
+            className="text-2xl text-center text-purple-500 mt-6"
+            initial={{ opacity: 0 }}
+            animate={forceFieldDeployed ? { opacity: 1 } : { opacity: 0 }}
+            transition={{ duration: 2 }}
+          >
+            Deploying force field!
+          </motion.div>
 
           <div className="flex flex-col space-y-4 mt-8">
             <motion.button 
@@ -136,27 +128,34 @@ function HomePage() {
             >
               Deploy Force Field
             </motion.button>
-          </div>
 
-          <div className="mt-4 flex items-center justify-center space-x-4">
-            <motion.a 
-              href={twitterLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              animate={controlsTwitter}
+            <motion.button 
+              className="py-1 px-2 rounded text-lg flex items-center justify-center bg-gradient-to-r from-blue-500 to-light-blue-500 text-white w-auto px-5"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
             >
-              <img src="/twitter-icon.png" alt="Twitter" width={24} height={24} />
-            </motion.a>
-            <motion.a 
-              href={flickrLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              animate={controlsFlickr}
+              <Link href={twitterLink}>Visit Twitter</Link>
+            </motion.button>
+
+            <motion.button 
+              className="py-1 px-2 rounded text-lg flex items-center justify-center bg-gradient-to-r from-purple-500 to-red-500 text-white w-auto px-5"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
             >
-              <img src="/flickr-icon.png" alt="Flickr" width={24} height={24} />
-            </motion.a>
+              <Link href={flickrLink}>Visit Flickr</Link>
+            </motion.button>
           </div>
         </Container>
+
+        <div className="container max-w-4xl m-auto mt-15 relative">
+          <Image
+            src="/zxc.png"
+            alt="A spaceship exploring the vastness of the universe"
+            width={1920 / 2}
+            height={1280 / 2}
+            className={laserFired ? "laser-effect" : warpEngaged ? "warp-effect" : forceFieldDeployed ? "forcefield-effect" : ""}
+          />
+        </div>
       </motion.div>
       <Analytics />
     </>
