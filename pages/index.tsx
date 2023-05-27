@@ -1,9 +1,8 @@
 import { motion, useAnimation } from 'framer-motion';
 import { useEffect } from 'react';
-import Container from '../components/container';
-import Image from 'next/image';
+import Container from '../components/container'
+import Image from 'next/image'
 import { Analytics } from '@vercel/analytics/react';
-import Particles from 'react-particles-js';
 
 function HomePage() {
   const twitterLink = "https://twitter.com/joshperry0";
@@ -31,36 +30,6 @@ function HomePage() {
 
   return (
     <>
-      <Particles 
-        params={{
-          particles: {
-            number: {
-              value: 80,
-              density: {
-                enable: true,
-                value_area: 800,
-              }
-            },
-            color: {
-              value: '#ffffff',
-            },
-            shape: {
-              type: 'circle',
-            },
-            move: {
-              speed: 0,
-            },
-          }
-        }}
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          zIndex: -1
-        }}
-      />
       <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -119,7 +88,7 @@ function HomePage() {
       </motion.div>
       <Analytics />
     </>
-  );
+  )
 }
 
-export default HomePage;
+export default HomePage
