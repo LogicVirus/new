@@ -35,7 +35,7 @@ function HomePage() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        className="flex flex-col md:flex-row items-center justify-center min-h-screen text-white bg-black"
+        className="flex flex-col md:flex-row items-center justify-center min-h-screen text-white"
       >
         <Container>
           <motion.h1 
