@@ -1,3 +1,4 @@
+// HomePage.js
 import { motion, useAnimation } from 'framer-motion';
 import { useEffect } from 'react';
 import Container from '../components/container'
@@ -34,7 +35,7 @@ function HomePage() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        className="flex flex-col items-center justify-center min-h-screen text-white"
+        className="flex flex-col md:flex-row items-center justify-center min-h-screen text-white bg-gradient-to-r from-purple-500 to-blue-600"
       >
         <Container>
           <motion.h1 
@@ -53,11 +54,11 @@ function HomePage() {
           >
             Greetings, explorers! Welcome to my space.
           </motion.p>
-          <div className="flex flex-col space-y-4 mt-8">
+          <div className="flex flex-col md:flex-row space-y-4 md:space-x-4 md:space-y-0 mt-8">
             <motion.a 
               href={twitterLink} 
               target="_blank"
-              className="py-1 px-2 rounded text-lg flex items-center justify-center bg-gradient-to-r from-blue-500 to-blue-600 text-white w-auto px-5"
+              className="py-1 px-2 rounded text-lg flex items-center justify-center bg-white text-blue-500 w-auto px-5"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               animate={controlsTwitter}
@@ -67,7 +68,7 @@ function HomePage() {
             <motion.a 
               href={flickrLink} 
               target="_blank"
-              className="py-1 px-2 rounded text-lg flex items-center justify-center bg-gradient-to-r from-purple-500 to-blue-500 text-white w-auto px-5"
+              className="py-1 px-2 rounded text-lg flex items-center justify-center bg-white text-purple-500 w-auto px-5"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               animate={controlsFlickr}
@@ -77,7 +78,7 @@ function HomePage() {
           </div>
         </Container>
 
-        <div className="container max-w-4xl m-auto mt-15">
+        <div className="container max-w-4xl m-auto mt-15 md:mt-0 md:ml-10">
           <Image
             src="/qwer.png"
             alt="moon"
