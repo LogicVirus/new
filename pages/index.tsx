@@ -35,7 +35,7 @@ function HomePage() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        className="flex flex-col md:flex-row items-center justify-center min-h-screen text-white bg-gradient-to-r from-purple-500 to-blue-600"
+        className="flex flex-col md:flex-row items-center justify-center min-h-screen text-white bg-black"
       >
         <Container>
           <motion.h1 
