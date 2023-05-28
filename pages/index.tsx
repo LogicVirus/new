@@ -37,7 +37,7 @@ function HomePage() {
         transition={{ duration: 1 }}
         className="flex flex-col md:flex-row items-center justify-center min-h-screen text-white bg-black"
       >
-        <Container className="mb-4 mb:mb-8">
+        <Container>
           <motion.h1 
             className="text-6xl font-bold text-blue-800 text-center"
             initial={{ y: -100 }}
